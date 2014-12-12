@@ -4,15 +4,13 @@
   "description": "Simple example using shoe for websockets, mux-demux and reconnect-core",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"browserify browser.js > public/bundle.js"
   },
   "keywords": [
     "shoe",
     "reconnect",
     "websockets"
-  ],
-  "scripts": [
-    "build":"browserify browser.js > public/bundle.js"
   ],
   "author": "@hugozap",
   "license": "MIT",
