@@ -1,4 +1,6 @@
-# Shoe-MuxDemux-reconnect example.
+# shoe reconnect-core and mux-demux example.
+
+![sample](sample.gif)
 
 A simple example that uses [shoe](http://github.com/substack/shoe) for websockets 
 and [reconnect-core](https://github.com/juliangruber/reconnect-core) to keep the connection alive.
