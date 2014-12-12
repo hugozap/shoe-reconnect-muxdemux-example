@@ -3,7 +3,7 @@
 A simple example that uses [shoe](http://github.com/substack/shoe) for websockets 
 and [reconnect-core](https://github.com/juliangruber/reconnect-core) to keep the connection alive.
 
-Multiple streams of data are used but only one websocket is used (thanks to mux-demux)
+Multiple streams of data are used but only one websocket is used (thanks to [mux-demux](https://github.com/dominictarr/mux-demux))
 
 ## Install
 
