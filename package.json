@@ -13,7 +13,7 @@
   ],
   "scripts": [
     "build":"browserify browser.js > public/bundle.js"
-  ]
+  ],
   "author": "@hugozap",
   "license": "MIT",
   "dependencies": {
