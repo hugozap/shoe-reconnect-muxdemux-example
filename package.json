@@ -1,0 +1,24 @@
+{
+  "name": "shoe-reconnect-muxdemux-example",
+  "version": "1.0.0",
+  "description": "Simple example using shoe for websockets, mux-demux and reconnect-core",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shoe",
+    "reconnect",
+    "websockets"
+  ],
+  "author": "@hugozap",
+  "license": "MIT",
+  "dependencies": {
+    "through": "~2.3.6",
+    "reconnect-core": "~0.2.1",
+    "mux-demux": "~3.7.9",
+    "shoe": "0.0.15",
+    "ecstatic": "~0.5.7",
+    "buffer": "~2.8.2"
+  }
+}
