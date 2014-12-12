@@ -11,7 +11,7 @@ Multiple streams of data are used but only one websocket is used (thanks to [mux
 
 Clone de repository and type
 
-	npm init
+	npm install
 	node index
 
 
