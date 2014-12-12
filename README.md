@@ -28,9 +28,11 @@ When you re start the server the browser reconnects and continues displaying dat
 
 ![muxdemux](muxdemux.png)
 
-In this example we have 10 streams sending data continously 
-and in the browser we show each data stream data.
 
+## Build
 
+If you modify browser.js and want to recompile, use:
+
+	npm build
 
 License: MIT

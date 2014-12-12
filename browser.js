@@ -1,17 +1,23 @@
 /*Browser code, connect to the server, receive data from
 multiple streams */
+
 var shoe = require('shoe');
 var MuxDemux = require('mux-demux');
 var through = require('through');
 var inject = require("reconnect-core")
+
+//create a reconnection for shoe
 var reconnect = inject(shoe);
 
+//setup reconnection
+//reconnect receives a function that is called
+//everytime the connection is made
+reconnect(function(websocketstream){
 
-reconnect(function(dataflow){
 	var mx = MuxDemux();
 
 	//Setup mux-demux device
-	dataflow.pipe(mx).dataflow;
+	websocketstream.pipe(mx).websocketstream;
 
 	//mux-demux "connection" event runs once for each stream
 	//the stream.meta property contains the name of the stream
@@ -38,7 +44,7 @@ reconnect(function(dataflow){
 
 		}));
 
-		console.log('stream connected'+stream.meta);
+		console.log('Stream connected'+stream.meta);
 	});
 
 

@@ -1,18 +1,24 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*Browser code, connect to the server, receive data from
 multiple streams */
+
 var shoe = require('shoe');
 var MuxDemux = require('mux-demux');
 var through = require('through');
 var inject = require("reconnect-core")
+
+//create a reconnection for shoe
 var reconnect = inject(shoe);
 
+//setup reconnection
+//reconnect receives a function that is called
+//everytime the connection is made
+reconnect(function(websocketstream){
 
-reconnect(function(dataflow){
 	var mx = MuxDemux();
 
 	//Setup mux-demux device
-	dataflow.pipe(mx).dataflow;
+	websocketstream.pipe(mx).websocketstream;
 
 	//mux-demux "connection" event runs once for each stream
 	//the stream.meta property contains the name of the stream
