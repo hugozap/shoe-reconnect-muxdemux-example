@@ -35,6 +35,6 @@ When you re start the server the browser reconnects and continues displaying dat
 
 If you modify browser.js and want to recompile, use:
 
-	npm build
+	npm run build
 
 License: MIT
